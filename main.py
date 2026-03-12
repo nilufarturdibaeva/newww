@@ -2,22 +2,17 @@ import asyncio
 from aiogram import Bot,Dispatcher
 from aiogram.types import Message
 from aiogram.filters import CommandStart,Command
+import os
 
-TOKEN = "8763458886:AAGyOxXkqNa__6dHh-dBkeKmK8fX2KEpxHI"
-bot = Bot(token=TOKEN)
+from dotenv import load_dotenv
+load_dotenv()
+
+Token = os.getenv('TOKEN')
+bot = Bot(token=Token)
 dp = Dispatcher()
 @dp.message(CommandStart)
 async def start(message:Message):
-    await message.answer(f"Assalawmu alikum {message.from_user.first_name}")
-
-@dp.message(Command('help'))
-async def help(message: Message):
-    await message.answer(f'qanday jardem kerek')
-
-@dp.message(Command('about'))
-async def help(message: Message):
-    await message.answer(f'test bot')
-
+    await message.answer(f"Hello {message.from_user.first_name}!")
 
 async def main():
     print('pollingg..')
