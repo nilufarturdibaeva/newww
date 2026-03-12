@@ -1,0 +1,32 @@
+# Python kesh faylları (Virtual mashina keshleri)
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual ortalıq (Virtual Environment) - Eń áhmiyetlisi!
+venv/
+env/
+.env/
+ENV/
+bin/
+lib/
+include/
+
+# IDE hám Redaktor sazlawları
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Maǵlıwmatlar bazası hám jeke maǵlıwmatlar
+*.db
+*.sqlite3
+.env          # Jeke kiltler hám parollar saqlanatuǵın fayl
+secrets.py
+
+# Log fayllar
+*.log
+
+# OS (Operacion sistema) faylları
+.DS_Store
+Thumbs.db
